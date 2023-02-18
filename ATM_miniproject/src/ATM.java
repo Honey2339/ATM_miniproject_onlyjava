@@ -50,11 +50,11 @@ public class ATM {
         {
             System.out.println("Maximum withdraw is 1-lakh sir/madam");
         }
-        else if (ATM.balance==0 && ATM.balance<0)
+        else if (ATM.balance<0 || withdraw>ATM.balance)
         {
             System.out.println("You cannot withdraw");
         }
-        else
+        else if (ATM.balance>0 || ATM.balance==0)
         {
             ATM.balance = ATM.balance - withdraw;
         }
